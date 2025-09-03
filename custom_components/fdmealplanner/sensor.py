@@ -125,6 +125,9 @@ class fdmealplannerSensor(Entity):
                             if counter > 5:
                                 break
                             entree = child.attrib.get('ComponentEnglishName').strip()
+                            is_show_on_menu = child.attrib.get('IsShowOnMenu', '0').strip()
+                            if is_show_on_menu != '1':
+                                continue
                             if entree == lastEntree:
                                 continue
                             lastEntree = entree    
