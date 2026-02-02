@@ -108,8 +108,8 @@ class fdmealplannerSensor(Entity):
                     formatted_tomorrow = urllib.parse.quote(tomorrow.format('MM DD YYYY'))
                     formatted_year = tomorrow.format('YYYY')
                     formatted_month = tomorrow.format('M')   
-                    
-                    url = 'https://apiservicelocators.fdmealplanner.com/api/v1/data-locator-webapi/3/meals?accountId=' + accountId + '&endDate=' + formatted_tomorrow + '&isActive=true&isStandalone&locationId='+ locationId +'&mealPeriodId=' + mealPeriodId + '&menuId=0&monthId=' +formatted_month+ '&selectedDate=' + formatted_tomorrow + '&startDate=' + formatted_tomorrow + '&tenantId=3&timeOffset=300&year=' + formatted_year
+
+                    url = 'https://apiservicelocatorstenantquest.fdmealplanner.com/api/v1/data-locator-webapi/4/meals?accountId=' + accountId + '&endDate=' + formatted_tomorrow + '&isActive=true&isStandalone&locationId='+ locationId +'&mealPeriodId=' + mealPeriodId + '&menuId=0&monthId=' +formatted_month+ '&selectedDate=' + formatted_tomorrow + '&startDate=' + formatted_tomorrow + '&tenantId=3&timeOffset=300&year=' + formatted_year                    
                     
                     resp = await session.get(url,headers=headers)
                     datajson = await resp.json()
