@@ -10,7 +10,7 @@ In your /config/configuration.yaml add a block under sensors:
     - 'XX/YY/Z'
 ```      
       
-`/XX/YY/Z` is the codes in the FD MealPanner URL: https://www.fdmealplanner.com/ for your school and meal type. For instance if you choose "Huntington Washington"  and the lunch meal, the URL you will be taken to is: `https://www.fdmealplanner.com/#menu/mealPlanner/27/65/2` so use `27/65/2` for your code.
+`/XX/YY/Z` is the codes in the FD MealPanner URL: https://classic.fdmealplanner.com/ for your school and meal type. For instance if you choose "Huntington Washington"  and the lunch meal, the URL you will be taken to is: `https://classic.fdmealplanner.com/#menu/mealPlanner/27/65/2` so use `27/65/2` for your code.
 
 This will create a sensor called sensor.fdmealplanner_27_65_2 with attributes of lunch0, lunch1, lunch2, lunch3, lunch4 which are the lunches of today - five days from now.
 Multiple schools should work, but not tested.
